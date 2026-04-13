@@ -1,0 +1,29 @@
+.sidebar {
+  color: white;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  color: #60a5fa;
+}
+.active {
+  color: #60a5fa;
+  font-weight: 600;
+}

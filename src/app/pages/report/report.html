@@ -1,0 +1,30 @@
+<div class="report">
+  <h2>Report Table</h2>
+
+  <p-table [value]="data" [lazy]="true" (onLazyLoad)="loadData($event)" [paginator]="true" [rows]="5"
+    [totalRecords]="totalRecords" [loading]="loading" [rowsPerPageOptions]="[5, 10, 20]" [sortMode]="'multiple'">
+    <!-- Header -->
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="name">
+          Name <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="age">
+          Age <p-sortIcon field="age"></p-sortIcon>
+        </th>
+        <th pSortableColumn="city">
+          City <p-sortIcon field="city"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+
+    <!-- Body -->
+    <ng-template pTemplate="body" let-row>
+      <tr>
+        <td>{{ row.name }}</td>
+        <td>{{ row.age }}</td>
+        <td>{{ row.city }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
